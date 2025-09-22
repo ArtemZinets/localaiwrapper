@@ -4,7 +4,7 @@
   "description": "Local app that wraps OpenAI API",
   "main": "index.js",
   "scripts": {
-    "rekt": "npx electron .",
+    "run": "npx electron .",
     "build": "electron-builder"
   },
   "author": "Artem Zinets",
