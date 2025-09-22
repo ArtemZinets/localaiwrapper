@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quantum AI</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+        <meta charset="unicode">
+    </head>
+    <body>
+        <div id="ChatContainer">
+            <div id="TopBarWrapper">
+                <div id="TopBar">
+                    <input type="text" placeholder="Name this conversation" id="ConvoName">
+                    <button class="FileButton" id="Save">Save</button>
+                    <button class="FileButton" id="Load">Load</button>
+                    <input type="text" placeholder="Enter OpenAI API key here..." id="Key">
+                </div>
+            </div>
+            <div id="HistoryContainer">
+                
+            </div>
+            <div id="InputContainerWrapper">
+                <div id="InputContainer">
+                    <textarea id="MessageInput" placeholder="Type the message..."></textarea>
+                    <button id="AttachmentSend" class="SendButton" style="width: 70px"><img src="uploadIcon.png"></button>
+                    <button id="MessageSend" class="SendButton">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="renderer.js"></script>
+    </body>
+</html>

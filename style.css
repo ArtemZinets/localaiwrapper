@@ -1,0 +1,193 @@
+:root {
+    --convenientPadding: 10px;
+    --backgroundColor: white;
+    --accentColor: #00ff9d;
+    --borderThickness: 1px;
+    --borderRoundness: 20px;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--backgroundColor);
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    overflow: hidden;
+}
+
+
+
+#TopBar {
+    display: flex;
+    flex-direction: row;
+    border: var(--borderThickness) solid;
+    border-radius: var(--borderRoundness);
+    border-color: gainsboro;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+    margin: var(--convenientPadding);
+    padding: var(--convenientPadding);
+}
+
+#TopBar > input {
+    border: none;
+}
+
+.FileButton {
+    background-color: black;
+    border-radius: calc(var(--borderRoundness));
+    color: white;
+    border: 0px;
+    font-size: 1rem;
+    margin: 0 var(--convenientPadding);
+}
+
+.FileButton:hover {
+    background-color: gainsboro;
+}
+
+.FileButton:active {
+    background-color: black;
+    color: gainsboro;
+}
+
+
+
+#ChatContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#HistoryContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: var(--convenientPadding);
+}
+
+
+
+#InputContainerWrapper {
+    padding: var(--convenientPadding);
+    box-sizing: border-box;
+}
+
+#InputContainer {
+    height: 100px;
+
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: calc(var(--convenientPadding) / 2);
+
+    border: var(--borderThickness) solid;
+    border-radius: var(--borderRoundness);
+    border-color: gainsboro;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+
+    background-color: white;
+}
+
+#MessageInput {
+    flex-grow: 1;
+    resize: none;
+    margin: var(--convenientPadding);
+    padding: 1px;
+    background-color: rgb(1,1,1,0);
+    border: 0px;
+}
+
+#MessageInput:focus {
+    border-bottom: 2px solid;
+    border-radius: 0 0 calc(var(--borderRoundness) / 4) calc(var(--borderRoundness) / 4);
+    border-color: gainsboro;
+    outline: 0px;
+}
+
+.SendButton {
+    background-color: black;
+    border-radius: calc(var(--borderRoundness));
+    color: white;
+    width: 120px;
+    border: 0px;
+    font-size: 1.5rem;
+    margin: var(--convenientPadding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SendButton:hover {
+    background-color: gainsboro;
+}
+
+.SendButton:active {
+    background-color: black;
+    color: gainsboro;
+}
+
+.SendButton > img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.UserMessage {
+    background-color: darkslategray;
+    padding-left: calc(var(--convenientPadding));
+    padding-right: calc(var(--convenientPadding));
+    padding-top: calc(var(--convenientPadding) / 8);
+    padding-bottom: calc(var(--convenientPadding) / 8);
+
+    border-radius: var(--borderRoundness);
+
+    width: 40%;
+    margin-left: auto;
+    margin-bottom: var(--convenientPadding);
+}
+
+.UserMessage > p {
+    color: white;
+    text-align: right;
+    word-break: normal;
+}
+
+.UserMessage > img {
+    width: 90%;
+    height: auto;
+    border-radius: var(--borderRoundness);
+    display: block;
+    margin: 0 auto var(--convenientPadding);
+}
+
+.AIMessage {
+    background-color: ghostwhite;
+    padding-left: calc(var(--convenientPadding));
+    padding-right: calc(var(--convenientPadding));
+    padding-top: calc(var(--convenientPadding) / 8);
+    padding-bottom: calc(var(--convenientPadding) / 8);
+
+    border-radius: var(--borderRoundness);
+
+    width: 40%;
+    margin-right: auto;
+    margin-bottom: var(--convenientPadding);
+    display: block;
+}
+
+.AIMessage > p {
+    color: black;
+    text-align: left;
+    word-break: normal;
+}
+
+.katex-display>.katex>.katex-html {
+    display: inline !important;
+}
+.katex-display {
+    display: inline !important;
+}
+.katex-display>.katex {
+    display: inline !important;
+}
